@@ -1,9 +1,3 @@
-import { MemList } from "./Mem";
-
 export function Main() {
-  return (
-    <div>
-      <MemList />
-    </div>
-  );
+  return <div>Tu powstanie głowny komponent</div>;
 }
