@@ -1,3 +1,3 @@
 export function Footer() {
-  return <div>Tu powstanie komponent stopki</div>;
+  return <footer>Tu powstanie komponent stopki</footer>;
 }

@@ -4,8 +4,6 @@ export function MemeList(props) {
 
   const [list, setList] = useState([]);
 
-  
-
   useEffect(() => {
     // declare the data fetching function
     const fetchData = async () => {
@@ -19,5 +17,5 @@ export function MemeList(props) {
       .catch(console.error);
   }, [])
 
-  return <div>Tu powstanie komponent listy memów {props.category}</div>;
+  return <main>Tu powstanie komponent listy memów {props.category}</main>;
 }
