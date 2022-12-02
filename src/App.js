@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
-import { Main } from "./components/Main";
+import { MemeList } from "./components/MemeList";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Navigate replace to="/hot" />} />
-          <Route path="/hot" element={<Main />} />
-          <Route path="/regural" element={<Main />} />
+          <Route path="/hot" element={<MemeList category='hot' />} />
+          <Route path="/regural" element={<MemeList category='regural' />} />
         </Routes>
       </Router>
       <Footer />
