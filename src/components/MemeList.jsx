@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './MemeList.module.css'
+import { Mem } from './Mem'
 
 export function MemeList(props) {
 
@@ -18,5 +19,9 @@ export function MemeList(props) {
       .catch(console.error);
   }, [])
 
-  return <main>Tu powstanie komponent listy memów {props.category}</main>;
+  return <main>
+    <Mem />
+    <Mem />
+    <Mem />
+    </main>;
 }
