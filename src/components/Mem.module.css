@@ -1,42 +1,50 @@
-.mem_wrapper{
-    margin: 20px;
-    padding: 16px;
+.mem_wrapper {
+  margin: 10px;
+  padding: 16px;
 }
 
-.mem{
-    width: 600px;
-    height: 650px;
-    background: #26292D;
-    border-radius: 32px;
-    text-align: center;
+.mem {
+  width: 600px;
+  height: 650px;
+  background: #26292d;
+  border-radius: 32px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.mem_title{
-    background: transparent;
-    font-size: 22px;
-    color: #FFFFFF;
-    padding: 25px;
+.mem_img {
+  width: 100%;
+  height: 78%;
+  object-fit: contain;
 }
 
-.mem_btn_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 30px;
+.mem_title {
+  background: transparent;
+  font-size: 22px;
+  color: #ffffff;
+  padding: 25px;
 }
 
-.mem_btn{
-    background: #F96066;
-    border-radius: 8px;
-    border: none;
-    height: 50px;
-    width: 100px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.1s all ease-in-out;
+.mem_btn_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
 }
-.mem_btn:hover{
-    background: #f86c71;
 
+.mem_btn {
+  background: #f96066;
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 100px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mem_btn:hover {
+  background: #f86c71;
 }
