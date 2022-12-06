@@ -7,20 +7,40 @@ export function Mem(props) {
 
   function incrementUpVotes() {
     setUpVotes(upVotes + 1);
-    updateMemVotes(props.mem.id);
+    updateMemUpVotes(props.mem.id);
   }
 
   function incrementDownVotes() {
     setDownVotes(downVotes + 1);
-    updateMemVotes(props.mem.id);
+    updateMemDownVotes(props.mem.id);
   }
 
   
 
-  async function updateMemVotes(id) {
+  async function updateMemUpVotes(id) {
     const mem = await (await fetch("http://localhost:4000/mems/" + id)).json();
 
     mem.upvotes += 1;
+
+    fetch("http://localhost:4000/mems/" + id, {
+      method: "PUT", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(mem),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+  
+  async function updateMemDownVotes(id) {
+    const mem = await (await fetch("http://localhost:4000/mems/" + id)).json();
+
     mem.downvotes += 1;
 
     fetch("http://localhost:4000/mems/" + id, {
