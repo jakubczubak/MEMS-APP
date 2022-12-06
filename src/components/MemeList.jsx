@@ -4,28 +4,46 @@ import { Mem } from "./Mem";
 
 export function MemeList(props) {
   const [list, setList] = useState([]);
-  const [hotList, setHotList] = useState([]);
-  const [reguralList, setReguralList] = useState([]);
+
 
   useEffect(() => {
-    // declare the data fetching function
+
     const fetchData = async () => {
       const data = await (await fetch("http://localhost:4000/mems")).json();
       setList(data);
     };
+    fetchData().catch(console.error);
+  });
 
-    // call the function
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
-  }, []);
+  const memeHotList = list.filter((data) => {
+  
+      return data.upvotes - data.downvotes > 5;
+  
+  });
 
-  return (
-    <main>
-      {list &&
-        list.map((mem) => {
-          return <Mem mem={mem} key={mem.id} />;
-        })}
-    </main>
-  );
+  if(props.category === 'hot'){
+
+    return (
+      <main>
+        {
+          memeHotList.map((mem) => {
+            return <Mem mem={mem} key={mem.id} />;
+          })}
+      </main>
+    );
+
+  }else{
+
+    return (
+      <main>
+        {
+          list.map((mem) => {
+            return <Mem mem={mem} key={mem.id} />;
+          })}
+      </main>
+    );
+
+  }
+
+
 }
