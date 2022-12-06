@@ -3,21 +3,21 @@
     {
       "id": 1,
       "title": "Mem #1",
-      "upvotes": 164,
-      "downvotes": 162,
+      "upvotes": 193,
+      "downvotes": 184,
       "img": "photo1.jpg"
     },
     {
       "id": 2,
       "title": "Mem #2",
-      "upvotes": 23,
+      "upvotes": 30,
       "downvotes": 18,
       "img": "photo2.jpg"
     },
     {
       "id": 3,
       "title": "Mem #3",
-      "upvotes": 28,
+      "upvotes": 35,
       "downvotes": 23,
       "img": "photo3.jpg"
     },
@@ -39,7 +39,7 @@
       "id": 6,
       "title": "Mem #6",
       "upvotes": 58,
-      "downvotes": 39,
+      "downvotes": 53,
       "img": "photo6.jpg"
     },
     {

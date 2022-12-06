@@ -15,9 +15,9 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={<Navigate replace to="/hot" />} />
-          <Route path="/hot" element={<MemeList category='hot' />} />
-          <Route path="/regural" element={<MemeList category='regural' />} />
+          <Route path="/" element={<Navigate replace to="/regural" />} />
+          <Route path="/hot" element={<MemeList category="hot" />} />
+          <Route path="/regural" element={<MemeList category="regural" />} />
         </Routes>
       </Router>
       <Footer />
