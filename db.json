@@ -3,50 +3,50 @@
     {
       "id": 1,
       "title": "Mem #1",
-      "upvotes": 276,
-      "downvotes": 248,
+      "upvotes": 321,
+      "downvotes": 314,
       "img": "photo1.jpg"
     },
     {
       "id": 2,
       "title": "Mem #2",
-      "upvotes": 55,
-      "downvotes": 18,
+      "upvotes": 59,
+      "downvotes": 54,
       "img": "photo2.jpg"
     },
     {
       "id": 3,
       "title": "Mem #3",
-      "upvotes": 51,
-      "downvotes": 41,
+      "upvotes": 61,
+      "downvotes": 57,
       "img": "photo3.jpg"
     },
     {
       "id": 4,
       "title": "Mem #4",
-      "upvotes": 15,
-      "downvotes": 12,
+      "upvotes": 31,
+      "downvotes": 27,
       "img": "photo4.jpg"
     },
     {
       "id": 5,
       "title": "Mem #5",
       "upvotes": 28,
-      "downvotes": 22,
+      "downvotes": 24,
       "img": "photo5.jpg"
     },
     {
       "id": 6,
       "title": "Mem #6",
       "upvotes": 59,
-      "downvotes": 53,
+      "downvotes": 55,
       "img": "photo6.jpg"
     },
     {
       "id": 7,
       "title": "Mem #7",
-      "upvotes": 90,
-      "downvotes": 78,
+      "upvotes": 93,
+      "downvotes": 86,
       "img": "photo7.jpg"
     }
   ]

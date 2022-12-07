@@ -1,21 +1,25 @@
 import styles from "../components/Mem.module.css";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { incrementCounter } from "../actions/memAction";
 
 export function Mem(props) {
   const [upVotes, setUpVotes] = useState(props.mem.upvotes);
   const [downVotes, setDownVotes] = useState(props.mem.downvotes);
 
+  const dispatch = useDispatch();
+
   function incrementUpVotes() {
     setUpVotes(upVotes + 1);
     updateMemUpVotes(props.mem.id);
+    dispatch(incrementCounter());
   }
 
   function incrementDownVotes() {
     setDownVotes(downVotes + 1);
     updateMemDownVotes(props.mem.id);
+    dispatch(incrementCounter());
   }
-
-  
 
   async function updateMemUpVotes(id) {
     const mem = await (await fetch("http://localhost:4000/mems/" + id)).json();
@@ -37,7 +41,7 @@ export function Mem(props) {
         console.error("Error:", error);
       });
   }
-  
+
   async function updateMemDownVotes(id) {
     const mem = await (await fetch("http://localhost:4000/mems/" + id)).json();
 

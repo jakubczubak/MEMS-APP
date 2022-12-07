@@ -1,16 +1,36 @@
-import { Link } from 'react-router-dom'
-import styles from '../components/Nav.module.css'
+import { Link } from "react-router-dom";
+import styles from "../components/Nav.module.css";
+import { useSelector } from "react-redux";
 
 export function Nav() {
+  const currentRoute = useSelector((state) => state.route);
 
-    return <nav>
-    <ul>
-      <li>
-        <Link className={styles.hotLink} to="/hot">⭐ HOT ⭐</Link>
-      </li>
-      <li>
-        <Link className={styles.link} to="/regural">REGURAL</Link>
-      </li>
-    </ul>
-  </nav>
+  const selectedRouteClasses = `${styles.link} ${styles.selectedLink}`;
+
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link
+            className={
+              currentRoute === "hot" ? selectedRouteClasses : styles.link
+            }
+            to="/hot"
+          >
+            ⭐ HOT ⭐
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={
+              currentRoute === "hot" ? styles.link : selectedRouteClasses
+            }
+            to="/regural"
+          >
+            REGURAL
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }

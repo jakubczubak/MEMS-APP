@@ -8,19 +8,23 @@ import {
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { MemeList } from "./components/MemeList";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Navigate replace to="/regural" />} />
-          <Route path="/hot" element={<MemeList category="hot" />} />
-          <Route path="/regural" element={<MemeList category="regural" />} />
-        </Routes>
-      </Router>
-      <Footer />
+      <Provider store={store}>
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Navigate replace to="/regural" />} />
+            <Route path="/hot" element={<MemeList category="hot" />} />
+            <Route path="/regural" element={<MemeList category="regural" />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </Provider>
     </div>
   );
 }
