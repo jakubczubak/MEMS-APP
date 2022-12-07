@@ -3,47 +3,42 @@ import styles from "./MemeList.module.css";
 import { Mem } from "./Mem";
 
 export function MemeList(props) {
-  const [list, setList] = useState([]);
-
+  const [list, setList] = useState({ regural: [], hot: [] });
 
   useEffect(() => {
-
     const fetchData = async () => {
+
       const data = await (await fetch("http://localhost:4000/mems")).json();
-      setList(data);
+
+      const memeHotList = data.filter((data) => {
+        return data.upvotes - data.downvotes > 5;
+      });
+
+      const memeReguralList = data.filter((data) => {
+        return data.upvotes - data.downvotes <= 5;
+      });
+      setList({ regural: memeReguralList, hot: memeHotList });
     };
+
     fetchData().catch(console.error);
-  });
 
-  const memeHotList = list.filter((data) => {
-  
-      return data.upvotes - data.downvotes > 5;
-  
-  });
+  }, []);
 
-  if(props.category === 'hot'){
-
+  if (props.category === "hot") {
     return (
       <main>
-        {
-          memeHotList.map((mem) => {
-            return <Mem mem={mem} key={mem.id} />;
-          })}
+        {list.hot.map((mem) => {
+          return <Mem mem={mem} key={mem.id} />;
+        })}
       </main>
     );
-
-  }else{
-
+  } else {
     return (
       <main>
-        {
-          list.map((mem) => {
-            return <Mem mem={mem} key={mem.id} />;
-          })}
+        {list.regural.map((mem) => {
+          return <Mem mem={mem} key={mem.id} />;
+        })}
       </main>
     );
-
   }
-
-
 }
