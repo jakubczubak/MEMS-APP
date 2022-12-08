@@ -31,6 +31,8 @@ export function Nav() {
           </Link>
         </li>
       </ul>
+      <Link className={`${styles.link} ${styles.add_meme}`} to="/add-meme">UPLOAD 😊</Link>
+
     </nav>
   );
 }

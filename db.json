@@ -10,21 +10,21 @@
     {
       "id": 2,
       "title": "Mem #2",
-      "upvotes": 59,
+      "upvotes": 61,
       "downvotes": 54,
       "img": "photo2.jpg"
     },
     {
       "id": 3,
       "title": "Mem #3",
-      "upvotes": 61,
+      "upvotes": 64,
       "downvotes": 57,
       "img": "photo3.jpg"
     },
     {
       "id": 4,
       "title": "Mem #4",
-      "upvotes": 31,
+      "upvotes": 32,
       "downvotes": 27,
       "img": "photo4.jpg"
     },
