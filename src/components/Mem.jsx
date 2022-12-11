@@ -67,11 +67,16 @@ export function Mem(props) {
     <div className={styles.mem_wrapper}>
       <div className={styles.mem}>
         <h3 className={styles.mem_title}>{props.mem.title}</h3>
-        <img
-          className={styles.mem_img}
-          src={require("../assets/" + props.mem.img)}
-          alt="mem"
-        />
+        {props.mem.img && (
+          <img
+            className={styles.mem_img}
+            src={require("../assets/" + props.mem.img)}
+            alt="mem"
+          />
+        )}
+        {props.mem.imgURL && (
+          <img className={styles.mem_img} src={props.mem.imgURL} alt="mem" />
+        )}
       </div>
       <div className={styles.mem_btn_wrapper}>
         <button className={styles.mem_btn} onClick={incrementUpVotes}>

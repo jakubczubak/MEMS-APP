@@ -3,21 +3,51 @@ import { useForm } from "react-hook-form";
 import Lottie from "lottie-react";
 import uploading from "../assets/uploading.json";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function MemeUpload() {
   const [memeURL, setMemeURL] = useState("");
+  let navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    saveMeme(data);
+  };
 
   const validateURL = async (memeURL) => {
     const res = await fetch(memeURL, { method: "HEAD" });
     return res.headers.get("Content-Type").startsWith("image");
   };
+
+  function saveMeme(data) {
+    let meme = {
+      title: data.memeTitle,
+      upvotes: 0,
+      downvotes: 0,
+      imgURL: data.memeURL,
+    };
+
+    console.log(meme);
+    fetch("http://localhost:4000/mems", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(meme),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        navigate("/regural");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
   return (
     <div className={styles.meme_upload_container}>
