@@ -1,0 +1,55 @@
+nav {
+  background: #212121;
+  border-bottom: 1px solid #808080;
+  height: 100px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 22px;
+}
+.selectedLink {
+  text-decoration: none;
+  padding: 16px;
+  font-size: 22px;
+  color: #ffd740;
+}
+
+.add_meme{
+ font-size: 16px;
+ text-align: center;
+ background: #f96066;
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 130px;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-weight: 500;
+}
+.add_meme:hover{
+  background: #f86c71;
+ }
+
+nav ul li:hover {
+  transition: 0.1s all ease-in-out;
+}
+nav ul li:hover {
+  transform: scale(1.05);
+}

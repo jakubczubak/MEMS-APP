@@ -1,0 +1,60 @@
+{
+  "mems": [
+    {
+      "id": 1,
+      "title": "Mem #1",
+      "upvotes": 321,
+      "downvotes": 314,
+      "img": "photo1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Mem #2",
+      "upvotes": 61,
+      "downvotes": 54,
+      "img": "photo2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Mem #3",
+      "upvotes": 64,
+      "downvotes": 57,
+      "img": "photo3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Mem #4",
+      "upvotes": 32,
+      "downvotes": 27,
+      "img": "photo4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Mem #5",
+      "upvotes": 28,
+      "downvotes": 24,
+      "img": "photo5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Mem #6",
+      "upvotes": 59,
+      "downvotes": 55,
+      "img": "photo6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Mem #7",
+      "upvotes": 93,
+      "downvotes": 86,
+      "img": "photo7.jpg"
+    },
+    {
+      "title": "Mem #1",
+      "upvotes": 321,
+      "downvotes": 314,
+      "img": "photo1.jpg",
+      "id": 8
+    }
+  ]
+}
