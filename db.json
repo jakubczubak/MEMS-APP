@@ -55,27 +55,6 @@
       "downvotes": 314,
       "img": "photo1.jpg",
       "id": 8
-    },
-    {
-      "title": "Mój pierwszt mem",
-      "upvotes": 7,
-      "downvotes": 0,
-      "imgURL": "https://i1.kwejk.pl/k/obrazki/2022/12/LfD8BhOQIEqSVC1E.jpg",
-      "id": 9
-    },
-    {
-      "title": "moj drugi mem",
-      "upvotes": 0,
-      "downvotes": 0,
-      "imgURL": "https://i1.kwejk.pl/k/obrazki/2022/12/VIqaZAeVPejQVq55.jpg",
-      "id": 10
-    },
-    {
-      "title": "moj 3 mem",
-      "upvotes": 0,
-      "downvotes": 0,
-      "imgURL": "https://i1.kwejk.pl/k/obrazki/2022/12/LfD8BhOQIEqSVC1E.jpg",
-      "id": 11
     }
   ]
 }

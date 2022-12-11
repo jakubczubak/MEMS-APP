@@ -1,4 +1,9 @@
-import { INCREMENT_COUNTER, SET_ROUTE } from "../actionTypes/actionTypes";
+import {
+  INCREMENT_COUNTER,
+  SET_ROUTE,
+  SET_OPEN,
+  SET_CLOSE,
+} from "../actionTypes/actionTypes";
 
 const incrementCounter = () => {
   return {
@@ -15,4 +20,16 @@ const setRoute = (route) => {
   };
 };
 
-export { incrementCounter, setRoute };
+const setOpen = () => {
+  return {
+    type: SET_OPEN,
+  };
+};
+
+const setClose = () => {
+  return {
+    type: SET_CLOSE,
+  };
+};
+
+export { incrementCounter, setRoute, setOpen, setClose };

@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import styles from "./MemeList.module.css";
 import { Mem } from "./Mem";
 import { useSelector, useDispatch } from "react-redux";
-import { setRoute } from "../actions/memAction";
+import { setRoute, setClose } from "../actions/memAction";
+import { Snackbar, Alert, Button } from "@mui/material";
 
 export function MemeList(props) {
   const [list, setList] = useState({ regural: [], hot: [] });
   const counter = useSelector((state) => state.counter);
   const currentRoute = useSelector((state) => state.route);
+  const open = useSelector((state) => state.open);
 
   const dispatch = useDispatch();
 
@@ -31,8 +33,23 @@ export function MemeList(props) {
     fetchData().catch(console.error);
   }, [counter]);
 
+  function handleClose() {
+    dispatch(setClose());
+  }
+
   return (
     <main>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          variant="outlined"
+          severity="info"
+          color="info"
+          sx={{ width: "100%" }}
+        >
+          <p className={styles.alert_info}>Successfully added new meme</p>
+        </Alert>
+      </Snackbar>
       {currentRoute === "hot"
         ? list.hot.map((mem) => {
             return <Mem mem={mem} key={mem.id} />;

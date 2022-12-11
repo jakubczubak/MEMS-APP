@@ -1,8 +1,12 @@
-main{
-    min-height: calc(100vh - 200px) ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
+main {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.alert_info {
+  color: rgb(9, 172, 201);
 }

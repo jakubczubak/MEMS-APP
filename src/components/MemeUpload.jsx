@@ -4,6 +4,8 @@ import Lottie from "lottie-react";
 import uploading from "../assets/uploading.json";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setOpen } from "../actions/memAction";
 
 export function MemeUpload() {
   const [memeURL, setMemeURL] = useState("");
@@ -13,6 +15,8 @@ export function MemeUpload() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     saveMeme(data);
@@ -31,7 +35,6 @@ export function MemeUpload() {
       imgURL: data.memeURL,
     };
 
-    console.log(meme);
     fetch("http://localhost:4000/mems", {
       method: "POST", // or 'PUT'
       headers: {
@@ -41,8 +44,9 @@ export function MemeUpload() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        // console.log("Success:", data);
         navigate("/regural");
+        dispatch(setOpen(true));
       })
       .catch((error) => {
         console.error("Error:", error);
