@@ -1,0 +1,87 @@
+.meme_upload_container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.meme_upload {
+  width: 550px;
+  height: auto;
+  background: #171a1e;
+  border-radius: 32px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  margin: 50px;
+}
+
+.meme_animation {
+  height: auto;
+  width: 300px;
+  margin: 0;
+}
+
+.meme_form {
+  width: 100%;
+}
+
+.meme_error {
+  color: red;
+  text-align: left;
+  padding: 8px;
+}
+
+.meme_upload_btn {
+  background: #f96066;
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 16px;
+}
+.meme_upload_btn:hover {
+  background: #f86c71;
+}
+
+form {
+  background-color: transparent;
+}
+
+form label {
+  color: white;
+  background-color: transparent;
+}
+form input {
+  width: 100%;
+  margin: 16px 0 16px 0;
+  background-color: rgb(65, 60, 60);
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+form input:active {
+  outline: none;
+}
+form input:focus {
+  outline: none;
+}
+
+form input::placeholder {
+  color: white;
+}

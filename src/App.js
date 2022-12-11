@@ -8,6 +8,7 @@ import {
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { MemeList } from "./components/MemeList";
+import { MemeUpload } from './components/MemeUpload'
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Navigate replace to="/regural" />} />
             <Route path="/hot" element={<MemeList category="hot" />} />
             <Route path="/regural" element={<MemeList category="regural" />} />
+            <Route path="/add-meme" element={<MemeUpload/>} />
           </Routes>
         </Router>
         <Footer />
